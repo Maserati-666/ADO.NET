@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Wallet_DB" Class="DataClassesProcDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-TT3JANN\SQLEXPRESS;Initial Catalog=Wallet_DB;Persist Security Info=True;User ID=admin" SettingsObjectName="Wallet.Properties.Settings" SettingsPropertyName="Wallet_DBConnectionString" Provider="System.Data.SqlClient" />
+  <Function Name="dbo.Today_Cost" Method="Today_Cost">
+    <ElementType Name="Today_CostResult">
+      <Column Name="NameCurrency" Type="System.String" DbType="NVarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="CurrencyDesignation" Type="System.String" DbType="NChar(3) NOT NULL" CanBeNull="false" />
+      <Column Name="Cost" Type="System.Decimal" DbType="Decimal(16,4) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Balance" Method="Balance">
+    <Parameter Name="Trader_ID" Parameter="trader_ID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="BalanceResult">
+      <Column Name="NameCurrency" Type="System.String" DbType="NVarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="CurrencyDesignation" Type="System.String" DbType="NChar(3) NOT NULL" CanBeNull="false" />
+      <Column Name="Quantity" Type="System.Decimal" DbType="Decimal(16,4) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+</Database>

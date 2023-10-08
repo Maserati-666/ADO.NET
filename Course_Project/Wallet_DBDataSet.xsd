@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Wallet_DBDataSet" targetNamespace="http://tempuri.org/Wallet_DBDataSet.xsd" xmlns:mstns="http://tempuri.org/Wallet_DBDataSet.xsd" xmlns="http://tempuri.org/Wallet_DBDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="Wallet_DBConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="Wallet_DBConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Wallet.Properties.Settings.GlobalReference.Default.Wallet_DBConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="CurrenciesTableAdapter" GeneratorDataComponentClassName="CurrenciesTableAdapter" Name="Currencies" UserDataComponentName="CurrenciesTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Wallet_DBConnectionString (Settings)" DbObjectName="Wallet_DB.dbo.Currencies" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT CurrencyDesignation FROM dbo.Currencies</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="CurrencyDesignation" DataSetColumn="CurrencyDesignation" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Wallet_DBDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="Wallet_DBDataSet" msprop:Generator_DataSetName="Wallet_DBDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Currencies" msprop:Generator_RowEvHandlerName="CurrenciesRowChangeEventHandler" msprop:Generator_RowDeletedName="CurrenciesRowDeleted" msprop:Generator_RowDeletingName="CurrenciesRowDeleting" msprop:Generator_RowEvArgName="CurrenciesRowChangeEvent" msprop:Generator_TablePropName="Currencies" msprop:Generator_RowChangedName="CurrenciesRowChanged" msprop:Generator_RowChangingName="CurrenciesRowChanging" msprop:Generator_TableClassName="CurrenciesDataTable" msprop:Generator_RowClassName="CurrenciesRow" msprop:Generator_TableVarName="tableCurrencies" msprop:Generator_UserTableName="Currencies">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CurrencyDesignation" msprop:Generator_ColumnPropNameInRow="CurrencyDesignation" msprop:Generator_ColumnPropNameInTable="CurrencyDesignationColumn" msprop:Generator_ColumnVarNameInTable="columnCurrencyDesignation" msprop:Generator_UserColumnName="CurrencyDesignation">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

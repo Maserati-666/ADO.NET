@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.625" name="DataClasses">
+  <DataContextMoniker Name="/DataClassesDataContext" />
+  <nestedChildShapes>
+    <classShape Id="f35b8d16-940b-459a-9555-6bc65a1d900c" absoluteBounds="0.75, 7, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/DataClassesDataContext/Currencies" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4fae7a83-8d58-4e67-831b-c391b15c25c5" absoluteBounds="0.765, 7.46, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="cb175afa-1bdf-45a6-b6d9-32132794d5de" absoluteBounds="3.5, 4, 2, 1.3862939453124996">
+      <DataClassMoniker Name="/DataClassesDataContext/Currencies_Traders" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a2745a8f-5b1b-43b8-97e8-5b1e7cd55466" absoluteBounds="3.515, 4.46, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4db4875d-1ba1-489b-879d-cfb2e1cc1def" absoluteBounds="3.5, 0.75, 2, 1.9631982421875">
+      <DataClassMoniker Name="/DataClassesDataContext/ExchangeOperation" />
+      <nestedChildShapes>
+        <elementListCompartment Id="53fa5cd9-c1b8-44a6-b570-fdeb79de602c" absoluteBounds="3.515, 1.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f378bf21-a501-491f-908f-3faf623eb8b4" absoluteBounds="0.75, 1.625, 2, 1.1939925130208338">
+      <DataClassMoniker Name="/DataClassesDataContext/ExchangeOperationType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4f03b4cd-9e12-400d-a90c-0171b56a7661" absoluteBounds="0.765, 2.085, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0fc3e5ca-4e69-4aab-a420-e4c3d7305aac" absoluteBounds="3.5, 7, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/DataClassesDataContext/ExchangeRate" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8bfd9ec8-3578-49d4-91ad-9645a1575b07" absoluteBounds="3.515, 7.46, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="32c799de-4a5f-4790-a856-8eaca379e12e" absoluteBounds="0.75, 3.875, 2, 1.7708968098958335">
+      <DataClassMoniker Name="/DataClassesDataContext/Traders" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0e63dfbd-eaf5-4a04-b81c-7269cd9d0382" absoluteBounds="0.765, 4.335, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 7); (3.125 : 6.625); (3.125 : 4.69314697265625); (3.5 : 4.69314697265625)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClassesDataContext/Currencies/Currencies_Currencies_Traders" />
+      <nodes>
+        <classShapeMoniker Id="f35b8d16-940b-459a-9555-6bc65a1d900c" />
+        <classShapeMoniker Id="cb175afa-1bdf-45a6-b6d9-32132794d5de" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 2.16909912109375); (3.04166666666667 : 2.16909912109375 : JumpStart); (3.20833333333333 : 2.16909912109375 : JumpEnd); (3.5 : 2.16909912109375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClassesDataContext/ExchangeOperationType/ExchangeOperationType_ExchangeOperation" />
+      <nodes>
+        <classShapeMoniker Id="f378bf21-a501-491f-908f-3faf623eb8b4" />
+        <classShapeMoniker Id="4db4875d-1ba1-489b-879d-cfb2e1cc1def" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 7.72439947265625); (3.5 : 7.72439947265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClassesDataContext/Currencies/Currencies_ExchangeRate" />
+      <nodes>
+        <classShapeMoniker Id="f35b8d16-940b-459a-9555-6bc65a1d900c" />
+        <classShapeMoniker Id="0fc3e5ca-4e69-4aab-a420-e4c3d7305aac" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 4.28407348632812); (3.5 : 4.28407348632812)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClassesDataContext/Traders/Traders_Currencies_Traders" />
+      <nodes>
+        <classShapeMoniker Id="32c799de-4a5f-4790-a856-8eaca379e12e" />
+        <classShapeMoniker Id="cb175afa-1bdf-45a6-b6d9-32132794d5de" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 3.875); (3.125 : 3.5); (3.125 : 1.42829756054688); (3.5 : 1.42829756054688)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClassesDataContext/Traders/Traders_ExchangeOperation" />
+      <nodes>
+        <classShapeMoniker Id="32c799de-4a5f-4790-a856-8eaca379e12e" />
+        <classShapeMoniker Id="4db4875d-1ba1-489b-879d-cfb2e1cc1def" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
